@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "trading-data-pipeline"
+version = "0.1.0"
+description = ""
+authors = ["hannah0wang <hannah0ananas@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+psycopg2 = "^2.9.10"
+pyspark = "^3.5.4"
+findspark = "^2.0.1"
+jupyter = "^1.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

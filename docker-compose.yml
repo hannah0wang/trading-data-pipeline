@@ -1,0 +1,26 @@
+services:
+  db:
+    container_name: pg_container
+    image: postgres:15  # Use a specific version for stability
+    restart: always
+    environment:
+      POSTGRES_USER: hannah0ananas
+      POSTGRES_PASSWORD: ananas
+      POSTGRES_DB: trading_data
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: hannah0ananas@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: ananas
+    ports:
+      - "5050:80"
+
+volumes:
+  postgres-data:
