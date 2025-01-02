@@ -5,19 +5,18 @@ In the ever-evolving world of trading, a robust data strategy is essential to st
 ## Data Pipeline
 The pipeline employs a standardized Extract, Transform, Load (ETL) process, leveraging tools such as Pandas and Apache Spark.
 
-Extract: We first extract/ingest data from market data providers, EODHD financial API, and alternative data sources. 
-Transform: The data is then cleaned, validated, and transformed to ensure accuracy and reliability. 
-Load: Finally, the processed data is stored in a centralized data lake leveraging Parquet, PostgreSQL, Docker, and TimescaleDB.
-
-Apache Airflow is used for orchestration and automation of the pipeline.
+- Extract: We first extract/ingest data from market data providers, EODHD financial API, and alternative data sources. 
+- Transform: The data is then cleaned, validated, and transformed to ensure accuracy and reliability. 
+- Load: Finally, the processed data is stored in a centralized data lake leveraging Parquet, PostgreSQL, Docker, and TimescaleDB.
+- Apache Airflow is used for orchestration and automation of the pipeline.
 
 
 ## Tech Stack
-Data Processing: Apache Spark, Pandas
-Data Orchestration: Apache Airflow
-Data Storage: TimescaleDB, Parquet, PostgreSQL
-Automation & Deployment: Docker
-APIs: EODHD financial API
+- Data Processing: Apache Spark, Pandas
+- Data Orchestration: Apache Airflow
+- Data Storage: TimescaleDB, Parquet, PostgreSQL
+- Automation & Deployment: Docker
+- APIs: EODHD financial API
 
 ## End Goal
 - Develop analytics dashboards to help create advanced trading strategies.
