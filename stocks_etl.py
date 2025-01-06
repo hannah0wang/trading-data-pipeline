@@ -110,20 +110,22 @@ def load(df):
         "driver": "org.postgresql.Driver",
         "stringtype": "unspecified" # Added so we can use database type enums
     }
+    
+    stocks_db_df = spark.read.jdbc(url=config.get_jdbc_url(), table='stocks', properties=JDBC_PROPERTIES)
+
 
     if df.count() > 0:
         # mode append to truncate all and recreate
         df.write.jdbc(config.get_jdbc_url(), 'stocks', mode='append', properties=JDBC_PROPERTIES)
 
+# # EXTRACT TESTING
+# df_extract = extract()
+# df_extract.show(10, truncate=15)
 
-
-# EXTRACT TESTING
-df_extract = extract()
-df_extract.show(10, truncate=False)
-
-# TRANSFORM TESTING
-df_transform = transform(df_extract)
-df_transform.show(10, truncate=False)
+# # TRANSFORM TESTING
+# df_transform = transform(df_extract)
+# df_transform.show(10, truncate=15)
+# df_transform.printSchema()
 
 load(transform(extract()))
 

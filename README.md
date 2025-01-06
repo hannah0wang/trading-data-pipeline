@@ -14,7 +14,7 @@ The pipeline employs a standardized Extract, Transform, Load (ETL) process, leve
 ## Tech Stack
 - Data Processing: Apache Spark, Pandas
 - Data Orchestration: Apache Airflow
-- Data Storage: TimescaleDB, Parquet, PostgreSQL
+- Data Storage: TimescaleDB, Parquet, PostgreSQL, PgAdmin
 - Automation & Deployment: Docker
 - APIs: EODHD financial API
 
